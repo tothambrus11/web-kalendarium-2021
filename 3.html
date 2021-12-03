@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3. nap - Kártya</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+        * {
+            font-family: Roboto, Verdana, sans-serif;
+        }
+
+        html, body {
+            margin: 0;
+            min-height: 100vh;
+        }
+
+        body {
+            background-color: #0a0319;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: #fff;
+            width: 330px; /* Or min(330px, 80%) */
+            max-width: 80%;
+            padding-bottom: 32px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .card .image-cont {
+            aspect-ratio: 16 / 9;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .card .image {
+            background-color: #000;
+            background-size: cover;
+            transition: .3s;
+            aspect-ratio: 16 / 9;
+        }
+
+        .card .image:hover {
+            transform: scale(1.1);
+            filter: brightness(125%);
+        }
+
+        .card h2 {
+            margin: 16px 32px;
+            color: black;
+            font-size: 1.4em;
+        }
+
+        .card h2:hover {
+            color: #603dac;
+        }
+
+        .card a {
+            text-decoration: none;
+        }
+
+        .card p {
+            margin: 16px 32px 0;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <a href="https://www.w3schools.com/">
+        <div class="image-cont">
+            <div class="image" style="background-image: url(3_motor.JPG)"></div>
+        </div>
+
+        <h2>The Tetrix Building System</h2>
+    </a>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequuntur dolor esse ipsum maiores
+        mollitia perspiciatis quam quibusdam rem velit! Atque, aut ea eos fugit hic molestias placeat porro
+        quis?</p>
+</div>
+</body>
+</html>
