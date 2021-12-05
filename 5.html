@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5. nap - Bejegyzéslista</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+        * {
+            font-family: Roboto, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0a0319;
+        }
+
+        .card-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            grid-gap: 32px;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin: 1em auto;
+            width: 80%;
+        }
+
+        /* CARD *****************************/
+
+        .card {
+            background-color: #fff;
+            padding-bottom: 32px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .card .image-cont {
+            aspect-ratio: 16 / 9;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        .card .image {
+            background-color: #000;
+            background-size: cover;
+            transition: .3s;
+            aspect-ratio: 16 / 9;
+        }
+
+        .card .image:hover {
+            transform: scale(1.1);
+            filter: brightness(125%);
+        }
+
+        .card h2 {
+            margin: 16px 32px;
+            color: black;
+            font-size: 1.4em;
+        }
+
+        .card h2:hover {
+            color: #603dac;
+        }
+
+        .card a {
+            text-decoration: none;
+        }
+
+        .card p {
+            margin: 16px 32px 0;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+<h1>Recent Posts</h1>
+<div class="card-list">
+    <div class="card">
+        <a href="https://www.w3schools.com/">
+            <div class="image-cont">
+                <div class="image" style="background-image: url(5_1.jpg)"></div>
+            </div>
+
+            <h2>The Tetrix Building System</h2>
+        </a>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequuntur dolor esse ipsum maiores
+            mollitia perspiciatis quam quibusdam rem velit! Atque, aut ea eos fugit hic molestias placeat porro
+            quis?</p>
+    </div>
+    <div class="card">
+        <a href="https://www.w3schools.com/">
+            <div class="image-cont">
+                <div class="image" style="background-image: url(5_2.jpg)"></div>
+            </div>
+
+            <h2>Generous Conveyor Belt</h2>
+        </a>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequatur delectus inventore
+            laudantium numquam reprehenderit unde vitae! Fugiat fugit nostrum repudiandae. Ab animi architecto at atque
+            beatae cum cumque, cupiditate debitis deserunt dicta eligendi est eum expedita facere fuga fugiat harum
+            incidunt ipsam iste iure maxime laboriosam laborum nesciunt, ratione repellat, rerum sed. Aspernatur
+            dignissimos error labore quam voluptatum?</p>
+    </div>
+    <div class="card">
+        <a href="https://www.w3schools.com/">
+            <div class="image-cont">
+                <div class="image" style="background-image: url(5_3.jpg)"></div>
+            </div>
+
+            <h2>Dirty Laser</h2>
+        </a>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A eaque, et impedit inventore laboriosam nesciunt
+            nostrum obcaecati odit pariatur perspiciatis praesentium, qui ratione sint suscipit voluptas? Iusto
+            laudantium odit quae tempora velit. Beatae, deserunt ex minima nesciunt optio quisquam repudiandae.
+            Assumenda corporis dolores fuga magni modi officiis qui quod veritatis.</p>
+    </div>
+    <div class="card">
+        <a href="https://www.w3schools.com/">
+            <div class="image-cont">
+                <div class="image" style="background-image: url(5_4.jpg)"></div>
+            </div>
+
+            <h2>Underrated Pre-kids</h2>
+        </a>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi consectetur, doloribus earum eius
+            enim est et id impedit in iste minima nam nesciunt numquam quae quam quasi quis quos repellat reprehenderit,
+            rerum sint sit soluta sunt tenetur vel voluptate! Accusantium doloremque, velit. Beatae commodi fugiat id
+            magni possimus.</p>
+    </div>
+    <div class="card">
+        <a href="https://www.w3schools.com/">
+            <div class="image-cont">
+                <div class="image" style="background-image: url(https://picsum.photos/800/451)"></div>
+            </div>
+
+            <h2>Aluminium Offices</h2>
+        </a>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto, consequatur debitis dicta
+            dignissimos doloremque dolores dolorum eaque ex harum, iste molestias natus officia quaerat repellat rerum,
+            similique tenetur vel? Asperiores consequatur cumque dolorem error inventore itaque laboriosam quas
+            tempora?</p>
+    </div>
+    <div class="card">
+        <a href="https://www.w3schools.com/">
+            <div class="image-cont">
+                <div class="image" style="background-image: url(https://picsum.photos/800/452)"></div>
+            </div>
+
+            <h2>The Lonely Garden</h2>
+        </a>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores beatae eligendi explicabo inventore
+            quaerat quo veniam, vitae! Iste nesciunt non nulla optio tenetur. Ab architecto atque blanditiis cumque,
+            exercitationem fuga illo impedit, ipsam, laborum minus possimus provident quasi quod ut.</p>
+    </div>
+    <div class="card">
+        <a href="https://www.w3schools.com/">
+            <div class="image-cont">
+                <div class="image" style="background-image: url(https://picsum.photos/800/449   )"></div>
+            </div>
+
+            <h2>Pencilsnake</h2>
+        </a>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda, dignissimos earum, eligendi
+            error ex exercitationem facilis ipsam, iure laboriosam libero molestias nemo nobis perferendis quam
+            reiciendis sunt! Impedit, sed.</p>
+    </div>
+</div>
+</body>
+</html>

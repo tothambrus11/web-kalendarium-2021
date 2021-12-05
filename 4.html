@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4. nap - grid</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+
+        html, body {
+            box-sizing: border-box;
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            padding: 32px;
+            box-sizing: border-box;
+        }
+
+        .cont {
+            display: grid;
+            grid-template-columns: 200px 3fr 1fr auto;
+            grid-template-rows: 200px 1fr;
+            height: 100%;
+            gap: 32px
+        }
+
+        .cont > * {
+            color: white;
+            font-family: Quicksand  , sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 2em;
+            transition: .2s;
+        }
+        .cont > *:nth-child(odd):hover {
+            transform: scale(1.03) rotate(3deg);
+        }
+        .cont > *:nth-child(even):hover {
+            transform: scale(1.03) rotate(-3deg);
+        }
+    </style>
+</head>
+<body>
+<div class="cont">
+    <div style="background-color: #603dac">1</div>
+    <div style="background-color: #3dac9f">2</div>
+    <div style="background-color: #66ac3d">3</div>
+    <div style="background-color: #0d5b15">4<br>content</div>
+    <div style="background-color: #061e49">5</div>
+    <div style="background-color: #49062c">6</div>
+    <div style="background-color: #a21616">7</div>
+    <div style="background-color: #0a0e01">8</div>
+</div>
+</body>
+</html>
