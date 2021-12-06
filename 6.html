@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        html, body {
+            margin: 0;
+            height: 100%;
+
+            z-index: 0;
+        }
+        body{
+            background-color: #141414;
+        }
+
+        #body {
+            /* Center content */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .body-part {
+            background-color: #fff;
+            border-radius: 50%;
+            aspect-ratio: 1; /* A szélesség és a magasság aránya legyen 1:1, így elég megadni egyszer a méretet. */
+        }
+
+        #top {
+            width: 100px;
+            position: relative; /* Ehhez az elemhez képest legyenek relatív a dolgok, amiket ezen belül abszolút pozícionálunk, mint pl a szemek. */
+        }
+
+        #eyes {
+            position: absolute;
+            top: 30%;
+            width: 100%; /* a parent element szélességének 100%-a legyen a szélesség, hogy ezen belül tudjuk középre igazítani majd a szemeket. */
+
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        #eyes * {
+            width: 20px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background-color: #000;
+
+        }
+
+        #middle {
+            width: 85px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+
+        #middle .button {
+            width: 10px;
+            aspect-ratio: 1;
+            background-color: #7C5C37;
+            border-radius: 50%;
+        }
+
+        #bottom {
+            width: 128px;
+        }
+
+        #hat {
+            width: 128px;
+            height: 15px;
+            position: absolute;
+            background: #860920;
+            left: 50%;
+            transform: translate(-50%);
+        }
+
+        #hat div {
+            height: 60px;
+            width: 80px;
+            position: absolute;
+            background: inherit;
+            left: 50%;
+            transform: translate(-50%, -60px);
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .arm {
+            width: 8px;
+            height: 90px;
+            position: absolute;
+            background-color: #7C5C37;
+            border-radius: 4px;
+            transform-origin: top center;
+            transition: .5s;
+            z-index: -1;
+        }
+
+        .arm1 {
+            transform: translate(-25px, 14px) rotate(45deg);
+        }
+
+        .arm2 {
+            transform: translate(25px, 14px) rotate(-45deg);
+        }
+
+        #middle:hover .arm1 {
+            transform: translate(-25px, 14px) rotate(90deg) !important;
+        }
+
+        #middle:hover .arm2 {
+            transform: translate(25px, 14px) rotate(-90deg);
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>December 8. - Hóember</title>
+</head>
+<body>
+<div id="body">
+    <div class="body-part" id="top">
+        <div id="hat">
+            <div></div>
+        </div>
+        <div id="eyes">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div class="body-part" id="middle">
+        <div class="button"></div>
+        <div class="button"></div>
+        <div class="button"></div>
+        <div class="arm arm1"></div>
+        <div class="arm arm2"></div>
+    </div>
+    <div class="body-part" id="bottom"></div>
+</div>
+</body>
+</html>
