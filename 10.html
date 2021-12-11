@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10. nap</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap');
+
+        body {
+            margin: 0;
+        }
+
+        * {
+            font-family: "Readex Pro", sans-serif;
+        }
+
+        #menu {
+            display: flex;
+            flex-direction: column;
+            background-color: #41a298;
+        }
+
+        #menu > * {
+            padding: 20px;
+        }
+
+        #toggle-menu {
+            border: none;
+            outline: none;
+            transition: .3s;
+            background-color: #41a298;
+            font-size: inherit;
+        }
+
+        #menu * {
+            text-decoration: none;
+            color: white;
+        }
+
+        #menu:not(.opened) a {
+            display: none;
+        }
+
+        #menu > * {
+            transition: .3s;
+        }
+
+        #menu > *:hover {
+            background-color: #2a6c63;
+        }
+
+        #menu.opened button::before {
+            content: '✖ ';
+        }
+
+        #menu:not(.opened) button::before {
+            content: '☰ ';
+        }
+
+        @media (min-width: 450px) {
+            #menu {
+                flex-direction: row;
+            }
+
+            #menu a {
+                display: block !important;
+            }
+
+            #toggle-menu {
+                display: none;
+            }
+        }
+
+        main {
+            width: 100%;
+            padding: 16px;
+            box-sizing: border-box;
+            max-width: 632px;
+            margin: auto;
+            text-align: justify;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<nav id="menu">
+    <button id="toggle-menu">Menu</button>
+    <a href="#">Item 1</a>
+    <a href="#">Item 2</a>
+    <a href="#">Item 3</a>
+    <a href="#">Long Item 4</a>
+</nav>
+<main>
+    <h1>Website Content</h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis doloremque dolorum labore, modi sequi
+        voluptatem? Accusamus atque, doloremque esse et expedita ipsum quod! Accusantium alias deleniti fugit hic
+        reprehenderit.
+    </p>
+</main>
+
+<script>
+    const toggleButton = document.getElementById("toggle-menu");
+    const menu = document.getElementById("menu");
+
+    toggleButton.addEventListener("click", () => {
+        menu.classList.toggle("opened");
+    });
+
+    window.addEventListener("resize", () => {
+        if(window.innerWidth > 450){
+            menu.classList.remove("opened"); // close menu
+        }
+    })
+</script>
+</body>
+</html>

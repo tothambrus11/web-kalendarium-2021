@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>9. nap - nth-child</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+        html{
+            height: 100%;
+        }
+        body {
+            background: url("9_bg.png") center;
+            background-size: cover;
+            font-family: Roboto, Verdana, sans-serif;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .big-cont {
+            display: grid;
+            grid-template-columns: 1fr auto auto;
+            row-gap: 16px;
+            width: 100%;
+            min-width: 500px;
+            max-width: 700px;
+            margin: auto auto 16px;
+        }
+
+        .big-cont > * {
+            padding: 16px;
+            background-color: #fff;
+            --border-radius: 10px;
+        }
+
+        /* minden harmadik utáni első */
+        .big-cont > *:nth-child(3n+1) {
+            border-bottom-left-radius: var(--border-radius);
+            border-top-left-radius: var(--border-radius);
+        }
+
+        /* minden harmadik utáni második */
+        .big-cont > *:nth-child(3n+2) {
+            text-align: center;
+        }
+
+        /* minden harmadik */
+        .big-cont > *:nth-child(3n) {
+            text-align: right;
+            border-top-right-radius: var(--border-radius);
+            border-bottom-right-radius: var(--border-radius);
+            color: #999;
+        }
+
+        h1{color: white;text-align: center;margin: 32px}
+
+        .scrollable-container{
+            width: auto;
+            margin: 16px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+<h1>Achievements</h1>
+<div class="scrollable-container">
+    <div class="big-cont">
+        <div>National High School Informatics Olympiad 1st Place</div>
+        <div>12/10/2020</div>
+        <div>national</div>
+
+        <div>IDK Competition 3r Place</div>
+        <div>11/5/2021</div>
+        <div>international</div>
+
+        <div>National Robot Programming Comeptition 7th Place</div>
+        <div>1/1/2017</div>
+        <div>national</div>
+    </div>
+</div>
+<h1>Other stuff</h1>
+<div class="scrollable-container">
+    <div class="big-cont">
+        <div>National High School Mathematics Olympiad 1st Place</div>
+        <div>12/10/2020</div>
+        <div>national</div>
+
+        <div>IDK Competition 2nd Place</div>
+        <div>11/5/2021</div>
+        <div>international</div>
+
+        <div>National Robot Programming Comeptition 1st Place</div>
+        <div>1/1/2017</div>
+        <div>national</div>
+    </div>
+</div>
+</body>
+</html>

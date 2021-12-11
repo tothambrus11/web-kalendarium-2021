@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7. Login</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+        *{
+            font-family: Quicksand, sans-serif;
+        }
+        html{
+            height: 100%;
+        }
+
+        body{
+            min-height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, #110047, #a30000);
+        }
+        #login-form{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 350px;
+            padding: 32px;
+            background-color: #fff;
+            box-sizing: border-box;
+            box-shadow: 0 5px 15px #0009;
+        }
+
+        @media (min-width: 350px) {
+            #login-form{
+                border-radius: 8px;
+            }
+        }
+        #login-form h2{
+            margin-top: 0;
+            text-align: center;
+        }
+        .text-input{
+            border: none;
+            background-color: #ececec;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-weight: 700;
+            border-radius: 3px;
+            transition: .3s;
+            outline: 3px solid transparent;
+        }
+        .text-input:focus{
+            outline: 3px solid  #605389;
+        }
+
+        input[type="submit"] {
+            border: none;
+            margin: 0 auto;
+            padding: 10px 40px;
+            font-weight: 600;
+            background: #110047;
+            color: white;
+            border-radius: 3px;
+            transition: .3s;
+            outline: none !important;
+        }
+
+        input[type="submit"]:hover{
+            background: #320d83;
+        }
+
+    </style>
+</head>
+<body>
+<form id="login-form">
+    <h2>Login</h2>
+    <input minlength="4" required class="text-input" placeholder="Username" type="text">
+    <input minlength="8" required class="text-input" placeholder="Password" type="password">
+    <input type="submit" value="Enter">
+</form>
+</body>
+</html>

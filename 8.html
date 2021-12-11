@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8. nap - bg-clip</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+
+        body, html {
+            margin: 0;
+            min-height: 100%;
+        }
+
+        h1 {
+            font-size: 3em;
+            background: linear-gradient(45deg, #000bff 0%, #fa5959 100%);
+            -webkit-background-clip: text;
+            color: transparent;
+            font-weight: 700;
+        }
+
+        * {
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        #bg-cont {
+            background-color: #333333; /* fallback - while image not loaded */
+            background-image: url(8_bg.jpg);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            filter: saturate(3) brightness(90%) hue-rotate(147deg);
+            height: 300px;
+        }
+
+        #text-cont {
+            width: 80%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #text-cont p {
+            text-align: justify;
+            line-height: 150%;
+            font-size: 16px;
+        }
+
+        button {
+            background: linear-gradient(45deg, #000bff 0%, #fa5959 100%);
+            border: none;
+            outline: none;
+            padding: 3px;
+            margin: 32px auto;
+            display: block;
+        }
+
+        button > div {
+            background-color: #fff;
+            padding: 16px 32px;
+            font-size: 16px;
+            transition: .5s;
+        }
+
+        button:hover > div {
+            background-color: transparent;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div id="bg-cont"></div>
+<div id="text-cont">
+    <h1>Invent. Build. Deploy.</h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at culpa, cum ea eaque eos error fugit harum
+        illum iste iure maxime mollitia neque nisi numquam officiis optio reiciendis, reprehenderit saepe sed sit soluta
+        suscipit totam veritatis voluptatum. Dignissimos distinctio ea magnam magni modi nobis omnis pariatur sed
+        similique suscipit.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab aliquid aut, autem beatae blanditiis consequatur
+        corporis cupiditate delectus dolore dolorum esse est exercitationem facere facilis fugiat harum id illum
+        incidunt inventore ipsam iste molestiae mollitia nam natus neque nostrum nulla provident quibusdam quod ratione
+        repellendus soluta unde vel, veniam voluptatem voluptatibus. Ab ad animi, aperiam asperiores atque, blanditiis
+        consectetur consequuntur deleniti distinctio doloremque, enim ex excepturi exercitationem fuga id minus modi
+        mollitia quod saepe similique sunt temporibus voluptas voluptatum? Aut blanditiis, ducimus esse hic illo
+        laboriosam minima natus nobis possimus quis quisquam repellendus, vitae voluptatem? Ab beatae reprehenderit.
+    </p>
+    <button>
+        <div>
+            Join Us!
+        </div>
+    </button>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at culpa, cum ea eaque eos error fugit harum
+        illum iste iure maxime mollitia neque nisi numquam officiis optio reiciendis, reprehenderit saepe sed sit soluta
+        suscipit totam veritatis voluptatum. Dignissimos distinctio ea magnam magni modi nobis omnis pariatur sed
+        similique suscipit.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab aliquid aut, autem beatae blanditiis consequatur
+        corporis cupiditate delectus dolore dolorum esse est exercitationem facere facilis fugiat harum id illum
+        incidunt inventore ipsam iste molestiae mollitia nam natus neque nostrum nulla provident quibusdam quod ratione
+        repellendus soluta unde vel, veniam voluptatem voluptatibus. Ab ad animi, aperiam asperiores atque, blanditiis
+        consectetur consequuntur deleniti distinctio doloremque, enim ex excepturi exercitationem fuga id minus modi
+        mollitia quod saepe similique sunt temporibus voluptas voluptatum? Aut blanditiis, ducimus esse hic illo
+        laboriosam minima natus nobis possimus quis quisquam repellendus, vitae voluptatem? Ab beatae reprehenderit .
+    </p>
+</div>
+</body>
+</html>
