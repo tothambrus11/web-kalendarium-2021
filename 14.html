@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>14. nap</title>
+    <style>
+        html, body {
+            height: 100vh;
+            margin: 0;
+            box-sizing: border-box;
+            background-color: #000;
+            overflow: hidden;
+        }
+
+        button {
+            background-color: white;
+            width: 100px;
+            height: 100px;
+            border: none;
+            border-radius: 50%;
+            position: absolute;
+            top: calc(50% - 50px);
+            left: calc(50% - 50px);
+            transition: 1s;
+        }
+        
+        button:hover{
+            background-color: #f00;
+        }
+
+        p {
+            color: white;
+            font-size: 1.5em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<p id="display"></p>
+<button id="btn">Nyomj meg, ha tudsz!</button>
+<script>
+    const display = document.getElementById("display");
+    const btn = document.getElementById("btn");
+
+    let pressCount = 0;
+
+    let delay = 1000;
+
+    function updateView() {
+        display.innerText = `${pressCount} sikeres megnyomás. ${delay}ms-od van a következőt elkapni.`
+
+    }
+
+    updateView();
+
+    btn.onclick = () => {
+        pressCount++;
+        if (delay > 500) {
+            delay -= 100;
+        } else {
+            delay *= .9;
+        }
+
+        updateView();
+    }
+
+
+    const buttonSize = 100;
+
+    btn.onmouseover = () => {
+        setTimeout(() => {
+            btn.style.transition = delay + "ms";
+            btn.style.left = Math.random() * (window.innerWidth - buttonSize) + "px";
+            btn.style.top = Math.random() * (window.innerHeight - buttonSize) + "px";
+
+            let color = Math.round(Math.random() * 360);
+            btn.style.backgroundColor = `hsl(${color}deg, 100%, 50%)`;
+            btn.style.color = `hsl(${color - 180}deg, 100%, 50%)`;
+        }, delay)
+    }
+</script>
+</body>
+</html>
